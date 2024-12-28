@@ -1,0 +1,12 @@
+apiVersoin: keda.sh/v1alpha1
+kind: ScaledObject
+metadata: 
+  name: sample-scaledobject
+  namespace: default
+spec: 
+  scaleTargetRef:
+    name: example-deployment
+  triggers: 
+  - type: cpu
+    metadata: 
+      value: "80"

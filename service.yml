@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: service
+metadata:
+   name: example-service
+   namespace: default
+spec: 
+  ports:
+  - port: 80
+    targetport: 8080
+  selector:
+    app: example-deployment
+    
